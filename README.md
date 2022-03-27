@@ -1,4 +1,4 @@
- termbreacker
+#Termbreacker
 
 Função principal - Ajudar pessoas com palavras que sigam determinados padrões do term.ooo. Funciona tanto para palavras em português quanto inglês.
 
@@ -10,9 +10,9 @@ Chamar a função index passando quatro parametros:
 * knowed_letters_without_position - Hash com a posição e a letra das letras descobertas mas na posição errada (amarelas)
 * knowed_letters_with_position - Hash com a posição e a letra das letras descobertas e na posição correta (verdes)
 
-#TESTS 
+#Example testes 
     
-example engligh
+#### Example engligh
 
 letters_wrong_position = {}
 letters_wrong_position[:"2"] = 'n'
@@ -25,8 +25,9 @@ wrong_letters = 'tearsfidsoug'
 
 puts index(array_en, wrong_letters,letters_wrong_position,letters_right_position )
 
+_________________________________________________________________________________________
 
-example portuguese
+#### Example portuguese
 letters_wrong_position = {}
 letters_wrong_position[:"0"] = 'a'
 
@@ -38,8 +39,7 @@ letters_right_position[:"0"] = 'l'
 wrong_letters = 'udonrzbc'
 
 puts index(array_pt, wrong_letters,letters_wrong_position, letters_right_position )
-
-Para executar o script basta abrir a pasta do arquivo no terminal e executar 
-ruby termbreacker.rb 
+________________________________________________________________________________________
+Para executar o script basta abrir a pasta do arquivo no terminal e executar ``ruby termbreacker.rb`` 
 Com isso deverá ser retornado no terminal as palavras que respeitam o padrão informado. 
 PS: Necessário ter instalado o ruby.
