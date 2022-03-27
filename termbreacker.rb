@@ -71,42 +71,12 @@ end
 
 
 
-def index(array, not_included, kwoned_letters, knowed_letters_position)
+def index(array, not_included, kwoned_letters_without_position, knowed_letters_with_position)
     selected_words = select_words(array)
     not_include_letters = not_include_words(not_included)
-    filtered_words = filter_words(selected_words, not_include_letters,kwoned_letters, knowed_letters_position)
+    filtered_words = filter_words(selected_words, not_include_letters,kwoned_letters_without_position, knowed_letters_with_position)
 
 end
-
-
-############### TESTS ######################
-#example engligh
-
-# letters_wrong_position = {}
-# letters_wrong_position[:"2"] = 'n'
-# letters_wrong_position[:"0"] = 'y'
-# letters_wrong_position[:"3"] = 'n'
-
-# letters_right_position = {}
-
-# wrong_letters = 'tearsfidsoug'
-
-# puts index(array_en, wrong_letters,letters_wrong_position,letters_right_position )
-
-
-#example portuguese
-# letters_wrong_position = {}
-# letters_wrong_position[:"0"] = 'a'
-
-# letters_right_position = {}
-# letters_right_position[:"3"] = 'i'
-# letters_right_position[:"1"] = 'a'
-# letters_right_position[:"0"] = 'l'
-
-# wrong_letters = 'udonrzbc'
-
-# puts index(array_pt, wrong_letters,letters_wrong_position, letters_right_position )
-
 
 array_pt = %w[Aarão ababa Ababa ababá abacá abaci ábaco abada abadá abade abafe abafo abaix- abajá abaju abala abalá abale abalo abane abano abará abaré Abaré abate abati abaxo abaza abcaz à␣beça abecê a-bê-cê á-bê-cê abeco abelh- abeto abezó abibe Abner abobe abobo aboco abofé aboie aboio abola abono abota Abrão Abreu abria abril Abril abrir abris abriu Abuja abund- abuso acaba acabe acabo a␣cabo acair acaju acalc- acará Acará Acari ácaro acaso acata Acauã acção aceno acesa aceso aceta acete aceto achai acham achar achas achei achem Achém aches achou ácido acima ácino à␣clef acoai acoam acoar acoas acode acoei acoem acoes ações acolá acoou acoro a␣cote actel actol actor acuai acuam acuar acuas açude acudi acuei acuem acues açule açulo acuou acusa acuse acuso acuta acuti- adaba adães Adães adaga adama Adama adame adamo Adamo add-on adega -ádego adeje adejo adeus adiai adiam adiar adias adida adido adiei adiem adies -ádigo adiou adite adito ádito adj.s.m. adobe adobo adora adore adoro adote adoto Ádria Ádrio adubo adufe adule adulo advir Aécia Aécio á-é-i-ó-u A.E.I.O.U. aerar aérea aéreo a␣esmo afago afala afama afano afare afaro afear afete afeto afiar afilo afixo aflar aflui afofe afofo afogo afora afoxé afudê afulo afurá agadê ágape ágata Ágata Ágato agave Ageus ágina ágino agite agito Agnes agogô ágono agora ágora agraz aguaí Aguaí aguar águas aguda agudo Agudo agues águia Águia Aiace aiala Ainão ainda aipim aí␣sim ajaja ajajá ajeru ajuda Ajuda ajude ajudo ajuga ajuru alabe alabo alada ALADI alado alães alaga alage à␣laia alalá ALALC Alana Alane Alano alãos Álava Albas albói Albos álbum alçar alças álcea alcei aleia alemã álemo ALEPA ALEPE ALERJ ALESC ALESP Aleto alfar alfim algar algas algia -algia ALGOL algor algoz algũa algum algur alhar aliar aliás álias alibi álibi Alice alien álien Alijó Alina Aline Alino alise almas Almas Almos alões aloés aloja alojo alpes altai altar altas altos Altos aluar aluco alude aluir alune aluno alvar alvas Alvas álveo Alves Alvim alvor alvos Alvos amada Amada amado Amado âmago amais a␣mais amame Amapá amara Amara amará amaro Amaro amava âmbar ambas ambos amear ameba ameia ameis ameno à␣mesa amial amido amiga amigo Amigo amita amito amojo amora amplo amuar anaco Anagé Anahy anais Anamã anano anãos Anapu anata ancho anciã -ância andai andam andar andas andei andem andes andoa andor andou André -andro andro- anéis anejo anelo anexe anexo anglo anhar anião anima ânima anime animé animê ânimo anina anine anino ânion aníon Anita Anito anixo anjos Anjos ânodo anões anoia anona Anori anote anoto ânsia antão Antão antar Antas antes Anteu antro anual anuir anuiu anule anulo anuro anzol ao␣léu a␣olho aonde Aónia aorta ápage apara apare aparo apear apego ápela apelo Apiaí ápice a␣pino apito ápode Apodi apodo ápodo apoio apojo Apolo Aporá Aporé Apple apupo apure apuro aquém aquém- árabe araçá Araci Araçu arado arama arame Arame aramo aranã arara Arara Arari Arauá Araxá arção arcar arcaz archa arcol arcos Arcos arder ardia ardil ardis ardor árduo areal Areal arear áreas areca areia Areia areje arejo arela arele arelo arena ARENA arepa arerê areus arfar argan argel Argel árgon Argos Arial árias Árias árido Ariel Aries Áries arigô arigó arilo arimo Ários arjão armai armam armar armas armei armem armes armou armur arnal arnaz arnês a␣rodo arola arolo aroma aromo arosi arpão arpar arpéu arqui- arras arrau arreu arroz artes Artur Aruba Arujá arujo árula arume arxar asais asara asará asava ASCII áscua aseis asilo asnal asnar asnos aspar aspas assai Assaí assam assar assas assaz assei assem asses assim Assis assou assuã astro ástur atado atais atara atará atava atear ateia atéia ateis Atena atese ateso até␣tu ateus atiça atiço ático Átila atino atire atiro ativa ative ativo atlas Atlas átomo atoni átono atrás Atreu a␣treu atril átrio atriz atroa atroo atros atroz atuai atual atuam atuar atuas atuei atuem atues atuou atxim aução audaz áudio aueté aueti áurea Áurea áureo aurir autor autos avais avara Avaré avaro ávaro avati aveia avelã à␣vela avena à␣vera avião aviar ávido avisa avise aviso aweti axila Axixá azado azare azedo azeri ázimo azoai azoam azoar azoas azoei azoem azoes à␣zóia azoou azoto azuis azule azulo babai babam babão babas babau babei babel Babel babem babes babou bacar bacia bacio bacon badio baeta bafar bafio bágoa bagre Bagre bágua Bahia baião Baião baiar baila baile bailo baita baite baixa baixe baixo balão balar balas balbo balda balde balés balga balho balir baliu balor balsa bamba bambê bâmbi bambo bambu banal banca bancá banco banda Banda bandê bando bandô banga bango banha banho banir banjo banto bantu banza banzé banzo baobá barão Barão barba barbo barca barco barda bardo Barém barga bário barra Barra barre barro Barro basaa basal basca basco
 bases bassê basta baste basto batch batel bater batom bâton bauru Bauru bazar BD-ROM bê-á-bá beata beato bebas bebem beber bebeu bebum becas becha beche bedel beiço beige beija beije beijo beiju beira beiro beita belas Belém belga belos bemba bemol benga Benim Benin bento Bento bentô beque -beque berça berce berço berma Berna berro besta beste besto betão betar Betim bhili biana biari bical bicar Bicas bicha bicho bicla bicos bíduo biela bifar bigle bigue bijou Bilac bilar biles bilha bílis bilro bimba bimbe bimbo binar binga bingo bioco bioma biota bipes birao birra bisai bisam bisão bisar bisas bisca bisei bisel bisem bises bisou bispa bispo bitar bívio blasé blefe blini blitz bloco bloga bluco blues bluff blusa BNDES boa-fé boate boato boava bobar bobot bocal boçal bocão bocas bocha boche bocoi bodão bodas bofás boião boiar boiça boiei boiil boina boira boita boîte bojar bolar bolas bolbo bolha bolor bolsa bolso bomba bombo bom␣de bonde bongô bónus bônus bonzo boras borás boráx Borba borda borde bordo bordô bória borla borne boroa bóroa borra borro bosão bóson bossa bosta boste bosto botai botam botão botar botas botei botem botes botim bóton botou botox bouba bouça bóxer boxes brabo braça braco braço brada brado braga Braga brama brasa brava bravo bravu breca brega breia breja brejo Brejo Brena Breno brete breve brevê brial brica brida briga Brigo briol brisa briza broar broas broca broça broco brodo bromo brota brote broto broxa broxe broxo bruar bruma bruna Bruna brune bruni bruno Bruno bruta bruto bruxa bruxo bucal bucha bucho bucil bucle buços Bueno bufão bufar bugar bugia bugie bugio bugre Bugre bugue bular bulas bulbo bulha bulho bulir bumbo bunda bundá bunho buque buquê burca burel burgo buril burla burra burro busão busca busto Butão búteo butes butiá Butiá butim bútio bútua buxão búzio caaba Caaba cabal cabaú cabaz cabem caber cabis cabos caboz cabra cabro cabum cação caçar cacau cacha cache caché cachê cacho cacre cacto caçuá cadêa Caeté cafés Cafés cafra cafre cafua cagão cagar caiar Caibi caibo cãibo caíco caicó Caicó caída caído -caína Cains Caios cãira cairo Cairo cãiro Cairu Caiuá caixa calai calam calão calar calas calça calce calco calço calda caldo calei calem cales calfe calha calhe cálix Cáliz calma calmo calom calor calos calou calva Calva calve calvo Calvo camal camas camba cambe Cambé cambo camim campa campã campo Canaã canal Canas cancã canda cando canga cango canha canil canja canle canoa cânon canos canse canso canta Cantá cante canto canza canzá capai capam capão capar capas capaz capem capes capim Capim capoa capot capou caput capuz caqui cáqui Caraá carai Caraí caras carás caray carda cardo carga cargo cárie caril cariz Carla Carlo carma carme Carmo carne carnê caros carpa carpê carpo carro carta carte casai casal casam casão casar casas casca Casca casco casei casem cases casos casou caspa cassa casse casso casta caste casto catai catam catar Catar catas catei catem cates catou catre catua Cauãs cauda Cauês cauim caule caupi cauri causa causo cauta cauto cavai cavam cavar cavas cávea cavei cavem caves cavou CD-ROM cê-agá ceara ceará Ceará cedem cedém ceder Cedro cegar ceiba ceifa ceife ceifo Ceita ceive celga celha Célia Célio celme celsa Celsa celso Celso celta cemba cenas cenho censo centi- cento cerca cerce cerco cerda cerdo Ceres cério cerne cerol cerra cerre cerro certa certo cerva cervo césar César césio cessa cesse cesso cesta cesto cetim cetro Ceuta cevar chabu chaço chada Chade chaga chalé Chalé chama chana chapa chape chapo chara charl- chata chato chatô Chaul chave Chave chavo checo chefa chefe chega cheia cheio Cheka chevá chião chiar chiba chibe chibé chibo chica chiça chico Chile china China chino- chipe chita chito choca choça choco choer chola cholo chona chope chora chore choro Choró choto chuca chuça chuço chufa chula chulé chulo chuta chute chuto chuva ciada ciano cíano ciãos cibar ciber- ciclo cidra cifra cifre cifro cigas cilha cilho cílio cimão cinco cinta cinto cinza cioso Cipra Cipro circo círia círio cirro cisão cisca cisco cisma cisne Cisne cisto citai citam citar citas Citas citei citem cites citou citro ciúme civil clado claim clame clamo clara Clara claro Claro clava clave clean clero clica click clima clina clipe clone cloro close Cloto clown clube coais coala coara coará Coari coava cobói cobra cobre cobri cobro Cocal cocão cocar coçar cocha coche cocho Cocos côdea côdeo códex coeis coeso coevo cofre coias coice coifa coima coime coina Coina coiné coira coíra coiro coisa coiso coita coité coito cóito colai colam colar colas colei colem coles colma colmo cólon colou colza comam comas combe combo comer comes comeu comia comua comum CONAR conas conca conde Conde Congo conha conho conta conte conto COPAM copão copar copas cópia copie copio copla Copom copra copta coque corai coral coram Corão corar
@@ -161,3 +131,15 @@ XNAND xoana Xolos XORed xorns Xosas X-pack XPath XPCOM XPers xpost Xquic Xrays x
 zules Zullo Zulus zumat Zumba zumbi Zumbi Zummo zum'ot Zunis Zuñis Zunos zupan Zupan zupas zuppa zuppe zurek Zurek zurfs zurla zurma zurna Zurns zuzes zuzim Zwart Zwick ZWNJs zygal zygon zymad zymes zymic zymin zyxin Zzyzx zzzed
 
 ]
+
+
+# Descomente a parte abaixo e execute a ação conforme necessidade. 
+
+# letters_wrong_position = {}
+# letters_wrong_position[:"0"] = 'a'
+
+# letters_right_position = {}
+# letters_right_position[:"0"] = 'b'
+
+# wrong_letters = 'string'
+# puts index(array_pt, wrong_letters, letters_wrong_position, letters_right_position)
