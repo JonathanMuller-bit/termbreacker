@@ -1,4 +1,4 @@
-#Termbreacker
+# Termbreacker
 
 Função principal - Ajudar pessoas com palavras que sigam determinados padrões do term.ooo. Funciona tanto para palavras em português quanto inglês.
 
